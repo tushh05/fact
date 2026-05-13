@@ -17,7 +17,7 @@ genai.configure(api_key=GEMINI_KEY)
 model = None
 working_model_name = ""
 try:
-    # Google se list maango jo models 'generateContent' support karte hain
+    # G
     for m in genai.list_models():
         if 'generateContent' in m.supported_generation_methods:
             working_model_name = m.name
@@ -26,7 +26,7 @@ try:
 except Exception as e:
     st.error(f"Engine Error: {e}")
 
-# UI Design
+# UIn
 st.set_page_config(page_title="Truth Layer Agent", layout="wide")
 st.title("🛡️ The Fact-Check Agent: Truth Layer")
 st.sidebar.success(f"Connected to: `{working_model_name}`")
@@ -92,7 +92,7 @@ if uploaded_file and model:
                             })
                     
                     st.table(results)
-                    st.success("✅ Complete! Record the video now.")
+                    st.success("✅ Complete")
                 else:
                     st.error("Could not find any facts. Check your PDF text.")
             except Exception as e:
