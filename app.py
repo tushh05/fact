@@ -7,8 +7,9 @@ import re
 import time
 
 
-GEMINI_KEY = "AIzaSyAkvINm-FG4m-pUiwx7jX8_x4IvNDMZP68" 
-SERPER_KEY = "7ea67648115d619e16691e54c4151b222754062e"
+
+GEMINI_KEY = st.secrets["GEMINI_KEY"]
+SERPER_KEY = st.secrets["SERPER_KEY"]
 
 genai.configure(api_key=GEMINI_KEY)
 
